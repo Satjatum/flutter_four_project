@@ -1,6 +1,8 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:flutter_four_project/views/login_ui.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SignupUI extends StatefulWidget {
   const SignupUI({super.key});
@@ -29,7 +31,9 @@ class _SignupUIState extends State<SignupUI> {
                 Align(
                   alignment: Alignment.centerLeft,
                   child: InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
                     child: Icon(
                       Icons.arrow_back_ios,
                       color: Colors.black,
@@ -91,9 +95,15 @@ class _SignupUIState extends State<SignupUI> {
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     prefixIcon: Icon(
-                      Icons.tag,
+                      FontAwesomeIcons.hashtag,
                     ),
                     hintText: "Phone No",
+                    suffixIcon: IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.visibility,
+                      ),
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -177,7 +187,14 @@ class _SignupUIState extends State<SignupUI> {
                       "Already have on Account? ",
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => LoginUI(),
+                          ),
+                        );
+                      },
                       child: Text(
                         "LOGIN",
                         style: TextStyle(

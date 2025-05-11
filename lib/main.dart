@@ -22,7 +22,7 @@ class _FlutterFourProjectState extends State<FlutterFourProject> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false, //ปิด debugBanner
-      home: SignupUI(), //กำหนดหน้าแรก
+      home: WelcomeUi(), //กำหนดหน้าแรก
       theme: ThemeData(
         textTheme: GoogleFonts.kanitTextTheme(
           Theme.of(context).textTheme,

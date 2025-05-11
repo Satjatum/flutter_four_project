@@ -1,6 +1,8 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:flutter_four_project/views/signup.dart';
+import 'package:flutter_four_project/views/welcome_ui.dart';
 
 class LoginUI extends StatefulWidget {
   const LoginUI({super.key});
@@ -29,7 +31,9 @@ class _LoginUIState extends State<LoginUI> {
                 Align(
                   alignment: Alignment.centerLeft,
                   child: InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
                     child: Icon(
                       Icons.arrow_back_ios,
                       color: Colors.black,
@@ -186,7 +190,14 @@ class _LoginUIState extends State<LoginUI> {
                       "Don't have on Account? ",
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SignupUI(),
+                          ),
+                        );
+                      },
                       child: Text(
                         "Signup",
                         style: TextStyle(
